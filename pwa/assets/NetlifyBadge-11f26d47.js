@@ -1,0 +1,1 @@
+import{u as e}from"./app-24008d8f.js";import{c as t}from"./framework-0d2263ab.js";const a=t({name:"NetlifyBadge",props:{alt:{type:String,default:"Deploys by Netlify"}},setup(o){return e(),()=>null}});export{a as N};

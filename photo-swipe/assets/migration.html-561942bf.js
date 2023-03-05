@@ -1,0 +1,1 @@
+import{a2 as t,Y as l,Z as n,a0 as e,a1 as o}from"./framework-b24ce889.js";const a={},c=e("ul",null,[e("li",null,[o("现在此插件使用 "),e("code",null,"photo-swipe"),o(" V5 版本。 V5 使用 ESM 重构，具有更小的大小。所以 "),e("code",null,"photo-swipe"),o(" 可接受的选项有所改变。")])],-1),s=[c];function r(_,i){return l(),n("div",null,s)}const u=t(a,[["render",r],["__file","migration.html.vue"]]);export{u as default};

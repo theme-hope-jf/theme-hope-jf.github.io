@@ -1,0 +1,77 @@
+import{a3 as n,Z as s,_ as e,a4 as a,a1 as l,a5 as i}from"./framework-61fc4e0a.js";const o={},c=l("p",null,"We always welcome everyone to contribute! Here is a guide for you.",-1),p=i(`<h2 id="clone-and-install-project" tabindex="-1"><a class="header-anchor" href="#clone-and-install-project" aria-hidden="true">#</a> Clone and Install Project</h2><p>Use Git to clone the project to the local, and use <code>pnpm</code> to install dependencies.</p><div class="language-bash" data-ext="sh"><pre class="shiki one-dark-pro" style="background-color:#282c34;" tabindex="0"><code><span class="line"><span style="color:#ABB2BF;">git </span><span style="color:#98C379;">clone</span><span style="color:#ABB2BF;"> </span><span style="color:#98C379;">git@github.com:vuepress-theme-hope/vuepress-theme-hope.git</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#ABB2BF;">pnpm </span><span style="color:#98C379;">i</span></span>
+<span class="line"></span></code></pre></div><div class="hint-container tip"><p class="hint-container-title">Tips</p><p>If you have not installed pnpm, please install it using the following command.</p><div class="language-bash" data-ext="sh"><pre class="shiki one-dark-pro" style="background-color:#282c34;" tabindex="0"><code><span class="line"><span style="color:#ABB2BF;">corepack </span><span style="color:#98C379;">enable</span></span>
+<span class="line"><span style="color:#ABB2BF;">corepack </span><span style="color:#98C379;">prepare</span><span style="color:#ABB2BF;"> </span><span style="color:#98C379;">pnpm@7.28.0</span><span style="color:#ABB2BF;"> </span><span style="color:#D19A66;">--activate</span></span>
+<span class="line"></span></code></pre></div></div><h2 id="project-file-structure" tabindex="-1"><a class="header-anchor" href="#project-file-structure" aria-hidden="true">#</a> Project File Structure</h2><p>The project is a monorepo, managed by pnpm.</p><ul><li><code>docs</code>: place the documentation of each plugin and theme, each subdirectory is a project</li><li><code>demo</code>: theme demo project</li><li><code>packages</code>: place the code of each plugin and theme, each subdirectory is a project</li></ul><div class="language-text line-numbers-mode" data-ext="text"><pre class="shiki one-dark-pro" style="background-color:#282c34;" tabindex="0"><code><span class="line"><span style="color:#abb2bf;">.</span></span>
+<span class="line"><span style="color:#abb2bf;">├── .github → GitHub config</span></span>
+<span class="line"><span style="color:#abb2bf;">├── .husky → husky config</span></span>
+<span class="line"><span style="color:#abb2bf;">│</span></span>
+<span class="line"><span style="color:#abb2bf;">├── demo → Demo projects</span></span>
+<span class="line"><span style="color:#abb2bf;">│</span></span>
+<span class="line"><span style="color:#abb2bf;">├── docs → document directory</span></span>
+<span class="line"><span style="color:#abb2bf;">│ ├── auto-catalog → auto-catalog plugin document</span></span>
+<span class="line"><span style="color:#abb2bf;">│ ├── blog → blog2 plugin document</span></span>
+<span class="line"><span style="color:#abb2bf;">│ ├── comment → comment2 plugin document</span></span>
+<span class="line"><span style="color:#abb2bf;">│ ├── components → components plugin document</span></span>
+<span class="line"><span style="color:#abb2bf;">│ ├── copy-code → copy-code2 plugin document</span></span>
+<span class="line"><span style="color:#abb2bf;">│ ├── feed → feed2 plugin document</span></span>
+<span class="line"><span style="color:#abb2bf;">│ ├── lightgallery → lightgallery plugin document</span></span>
+<span class="line"><span style="color:#abb2bf;">│ ├── md-enhance → md-enhance plugin document</span></span>
+<span class="line"><span style="color:#abb2bf;">│ ├── photo-swipe → photo-swipe document</span></span>
+<span class="line"><span style="color:#abb2bf;">│ ├── pwa → pwa2 plugin document</span></span>
+<span class="line"><span style="color:#abb2bf;">│ ├── reading-time → reading-time2 plugin document</span></span>
+<span class="line"><span style="color:#abb2bf;">│ ├── rtl → rtl plugin document</span></span>
+<span class="line"><span style="color:#abb2bf;">│ ├── remove-pwa → remove-pwa plugin document</span></span>
+<span class="line"><span style="color:#abb2bf;">│ ├── sass-palette → sass-palette plugin document</span></span>
+<span class="line"><span style="color:#abb2bf;">│ ├── search-pro → search-pro plugin document</span></span>
+<span class="line"><span style="color:#abb2bf;">│ ├── seo → seo2 plugin document</span></span>
+<span class="line"><span style="color:#abb2bf;">│ └── theme → theme document</span></span>
+<span class="line"><span style="color:#abb2bf;">│</span></span>
+<span class="line"><span style="color:#abb2bf;">├── packages → project source code</span></span>
+<span class="line"><span style="color:#abb2bf;">│ ├── auto-catalog → auto-catalog plugin</span></span>
+<span class="line"><span style="color:#abb2bf;">│ ├── blog2 → blog2 plugin</span></span>
+<span class="line"><span style="color:#abb2bf;">│ ├── comment2 → comment2 plugin</span></span>
+<span class="line"><span style="color:#abb2bf;">│ ├── components → components plugin</span></span>
+<span class="line"><span style="color:#abb2bf;">│ ├── copy-code2 → copy-code2 plugin</span></span>
+<span class="line"><span style="color:#abb2bf;">│ ├── create → create-vuepress-theme-hope helper</span></span>
+<span class="line"><span style="color:#abb2bf;">│ ├── feed2 → feed2 plugin</span></span>
+<span class="line"><span style="color:#abb2bf;">│ ├── lightgallery → lightgallery plugin</span></span>
+<span class="line"><span style="color:#abb2bf;">│ ├── md-enhance → md-enhance plugin</span></span>
+<span class="line"><span style="color:#abb2bf;">│ ├── photo-swipe → photo-swipe plugin</span></span>
+<span class="line"><span style="color:#abb2bf;">│ ├── pwa2 → pwa2 plugin</span></span>
+<span class="line"><span style="color:#abb2bf;">│ ├── reading-time2 → reading-time2 plugin</span></span>
+<span class="line"><span style="color:#abb2bf;">│ ├── remove-pwa → remove-pwa plugin</span></span>
+<span class="line"><span style="color:#abb2bf;">│ ├── rtl → rtl plugin</span></span>
+<span class="line"><span style="color:#abb2bf;">│ ├── sass-palette → sass-palette plugin</span></span>
+<span class="line"><span style="color:#abb2bf;">│ ├── search-pro → search-pro plugin</span></span>
+<span class="line"><span style="color:#abb2bf;">│ ├── seo2 → seo2 plugin</span></span>
+<span class="line"><span style="color:#abb2bf;">│ ├── shared → shared file</span></span>
+<span class="line"><span style="color:#abb2bf;">│ ├── sitemap2 → sitemap2 plugin</span></span>
+<span class="line"><span style="color:#abb2bf;">│ └── theme → vuepress-theme-hope theme</span></span>
+<span class="line"><span style="color:#abb2bf;">│</span></span>
+<span class="line"><span style="color:#abb2bf;">├── scripts → command scripts</span></span>
+<span class="line"><span style="color:#abb2bf;">│</span></span>
+<span class="line"><span style="color:#abb2bf;">├── ... → some config files</span></span>
+<span class="line"><span style="color:#abb2bf;">│</span></span>
+<span class="line"><span style="color:#abb2bf;">├── LICENSE → License</span></span>
+<span class="line"><span style="color:#abb2bf;">├── package.json → root package.json</span></span>
+<span class="line"><span style="color:#abb2bf;">├── README.md → project intro</span></span>
+<span class="line"><span style="color:#abb2bf;">├── SECURITY.md → Security Policy</span></span>
+<span class="line"><span style="color:#abb2bf;">│</span></span>
+<span class="line"><span style="color:#abb2bf;">└── tsconfig.* → TypeScript config file</span></span>
+<span class="line"><span style="color:#abb2bf;"></span></span></code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="document-modification" tabindex="-1"><a class="header-anchor" href="#document-modification" aria-hidden="true">#</a> Document Modification</h2><p>You can find the corresponding project in the docs directory so you can modify the corresponding Markdown directly.</p><p>After ensuring that the <code>pnpm lint</code> and <code>pnpm lint:md</code> commands emit no errors, you can commit to GitHub to open a PR.</p><div class="hint-container tip"><p class="hint-container-title">Preview Docs</p><p>Since the docs are using local themes and plugins, you need to build the local project through <code>pnpm build</code> first.</p><p>To start previewing, cd to the right project under <code>docs</code> directory, then run <code>pnpm docs:vite-dev</code> (using vite) or <code>pnpm docs:webpack-dev</code> (using webpack).</p></div><h2 id="project-modification" tabindex="-1"><a class="header-anchor" href="#project-modification" aria-hidden="true">#</a> Project Modification</h2><p>The structure of each project is as follows:</p><div class="language-text line-numbers-mode" data-ext="text"><pre class="shiki one-dark-pro" style="background-color:#282c34;" tabindex="0"><code><span class="line"><span style="color:#abb2bf;">.</span></span>
+<span class="line"><span style="color:#abb2bf;">├── lib → compiled output file</span></span>
+<span class="line"><span style="color:#abb2bf;">│    │</span></span>
+<span class="line"><span style="color:#abb2bf;">│    ├── client → client-side compiled code</span></span>
+<span class="line"><span style="color:#abb2bf;">│    │</span></span>
+<span class="line"><span style="color:#abb2bf;">│    └── node → Node.js side compiled code</span></span>
+<span class="line"><span style="color:#abb2bf;">│</span></span>
+<span class="line"><span style="color:#abb2bf;">└── src → source file</span></span>
+<span class="line"><span style="color:#abb2bf;">     │</span></span>
+<span class="line"><span style="color:#abb2bf;">     ├── client → client-side source code</span></span>
+<span class="line"><span style="color:#abb2bf;">     │</span></span>
+<span class="line"><span style="color:#abb2bf;">     ├── node → Node.js side source code</span></span>
+<span class="line"><span style="color:#abb2bf;">     │</span></span>
+<span class="line"><span style="color:#abb2bf;">     └── shared → Shared files between node and client</span></span>
+<span class="line"><span style="color:#abb2bf;"></span></span></code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>VuePress is running both in client side and node side. Node side has node module like <code>fs</code>, while client side is running in browser which has <code>document</code> <code>windows</code> <code>navigator</code> etc. globals, you should be aware of where a piece of code is running.</p><ul><li><code>client</code> directory stores code running in browser</li><li><code>node</code> directory stores code running in Node.js</li><li><code>shared</code> directory stores files that are used in both client and node, so code shall not reference any browser globals or node module.</li></ul><p>For better performance, all plugins are packed and minified using rollup when they are published.</p><h2 id="project-development" tabindex="-1"><a class="header-anchor" href="#project-development" aria-hidden="true">#</a> Project Development</h2><ol><li><p>Build project: <code>pnpm build</code></p><ul><li>Use rollup to bundle source files and minify them, and output results to <code>lib</code> folder</li><li>Use <code>rollup-plugin-copy</code> to copy other files to <code>lib</code> folder</li></ul></li><li><p>Develop project: <code>pnpm dev</code></p><ul><li>Use <code>tsc</code> to compile ts file to <code>lib</code> folder</li><li>Use <code>cpx</code> to copy other files to <code>lib</code> folder</li></ul></li><li><p>Format project: <code>pnpm lint</code></p><p>It will format the project using prettier, eslint and stylelint.</p><p>If you modify Markdown, you also need to run the <code>pnpm lint:md</code> command.</p></li></ol><div class="hint-container warning"><p class="hint-container-title">Note</p><p>Please do not mix build and dev commands as they compile in completely different ways.</p><p>You may need to execute the <code>pnpm clean</code> command to clear previous command result.</p></div><h2 id="commit" tabindex="-1"><a class="header-anchor" href="#commit" aria-hidden="true">#</a> Commit</h2><p>The project uses <code>husky</code> to add Git Hooks for verification:</p><ul><li><p>In <code>precommit</code> stage: we use <code>lint-staged</code> to check the changed code with the corresponding Linter</p><p>This means that you need to ensure that your code is formatted by the project requirements and can pass Linter tests.</p></li><li><p>In <code>commit-msg</code> stage: we use <code>commitlint</code> to verify the commit comment.</p><p>This means that you need to ensure that your commit comments comply with Semantic</p></li></ul><div class="hint-container tip"><p class="hint-container-title">Tips</p><p>If you cannot pass the above Git Hooks, you will not be able to complete <code>git commit</code>.</p><p>If you have already contributed something, but cannot make a commit and don’t know how to fix it, you can add the <code>--no-verify</code> flag when committing to bypass Git Hooks.</p></div>`,25);function t(d,r){return s(),e("div",null,[c,a(" more "),p])}const u=n(o,[["render",t],["__file","contribution.html.vue"]]);export{u as default};
